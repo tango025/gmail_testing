@@ -23,9 +23,12 @@ if (request.greeting == "send_email"){
 			emailList += "," + emailArray[k];
 		}
 		if(ko==2){
-			document.getElementById(":5v").value = emailList;//enter the email array
-			document.getElementById(":6i").innerHTML = "hello from ATG.world "+key;//adding message
-			document.getElementById(":53").click()//click send
+			document.getElementById(":5r").value = emailList;//enter the email array
+			// document.getElementById(":6i").classList.add("Ao");
+			// document.getElementById(":6e").innerHTML = "hello from ATG.world " + key;//adding message
+			document.getElementsByClassName("Ar Au")[0].classList.add("Ao");
+			document.getElementsByClassName("Am Al editable")[0].innerHTML = "hello from ATG.world " + key;//adding message
+			document.getElementById(":4z").click()//click send
 			console.log("sent");
 		}
 	},10000);
@@ -33,10 +36,11 @@ if (request.greeting == "send_email"){
 		chrome.runtime.sendMessage({ 'send_email_response': 'email_sent' }, function (response) {
 			console.log(`mess2222cvackground`);
 		});
-	},15000);
+	},18000);
 }
 }
 
 if (!chrome.runtime.onMessage.hasListener(main_fx)) {
   chrome.runtime.onMessage.addListener(main_fx);
+
 }
